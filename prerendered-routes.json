@@ -1,0 +1,8 @@
+{
+  "routes": {
+    "/PrimaUI": {},
+    "/PrimaUI/otppage": {},
+    "/PrimaUI/page2": {},
+    "/PrimaUI/page3": {}
+  }
+}
