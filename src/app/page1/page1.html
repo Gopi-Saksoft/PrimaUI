@@ -1,0 +1,23 @@
+<div class="col-md-12">
+    <div class="passcode-wrapper">
+        <br>
+        <input id="txtCode1" [(ngModel)]="code1" type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="1"
+            [appMaxDigits]="1" autocomplete="one-time-code" (keydown)="handleOtpKey($event, 1)">
+        <input id="txtCode2" [(ngModel)]="code2" type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="1"
+            [appMaxDigits]="1" autocomplete="one-time-code" (keydown)="handleOtpKey($event, 2)">
+        <input id="txtCode3" [(ngModel)]="code3" type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="1"
+            [appMaxDigits]="1" autocomplete="one-time-code" (keydown)="handleOtpKey($event, 3)">
+        <input id="txtCode4" [(ngModel)]="code4" type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="1"
+            [appMaxDigits]="1" autocomplete="one-time-code" (keydown)="handleOtpKey($event, 4)">
+        <input id="txtCode5" [(ngModel)]="code5" type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="1"
+            [appMaxDigits]="1" autocomplete="one-time-code" (keydown)="handleOtpKey($event, 5)">
+        <input id="txtCode6" [(ngModel)]="code6" type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="1"
+            [appMaxDigits]="1" autocomplete="one-time-code" (keydown)="handleOtpKey($event, 6)">
+    </div>
+    <p>OTP Value: {{ otpValue }}</p>
+    <div>
+        <br>
+        <button style="display: inline-block; margin-right: 10px;" (click)="submit()">Submit</button>
+        <button style="display: inline-block;" (click)="reset()">Reset</button>
+    </div>
+</div>
