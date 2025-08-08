@@ -9,6 +9,14 @@ export class MaxDigitsDirective {
 
   private allowedKeys = ['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'Tab'];
 
+@HostListener('input', ['$event'])
+onInput(event: Event): void {
+  const input = event.target as HTMLInputElement;
+  const digits = input.value.replace(/\D/g, '').slice(0, this.appMaxDigits);
+  input.value = digits;
+}
+
+
   @HostListener('keydown', ['$event'])
   onKeyDown(event: KeyboardEvent): void {
     const input = event.target as HTMLInputElement;

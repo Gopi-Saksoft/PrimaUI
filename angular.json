@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "customer-portal": {
+    "PrimaUI": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -63,10 +63,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "customer-portal:build:production"
+              "buildTarget": "PrimaUI:build:production"
             },
             "development": {
-              "buildTarget": "customer-portal:build:development"
+              "buildTarget": "PrimaUI:build:development"
             }
           },
           "defaultConfiguration": "development"
